@@ -1,0 +1,19 @@
+{
+  "name": "Space Shooter Game",
+  "description": "SpaceShooter | Beginner Hack 1.0",
+  "repository": "https://github.com/dbads/SpaceShooter",
+  "keywords": ["SpaceShooter", "MNNIT", "heroku SpaceShooter"],
+  "success_url":"/",
+  "env":{
+    "DISABLE_COLLECTSTATIC":"1", 
+    "SECRET_KEY": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+  },
+  "addons":[
+    {
+	    "plan":"heroku-postgresql"
+    }
+  ], 
+}
