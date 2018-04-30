@@ -1,4 +1,4 @@
-{% load statifiles %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,21 +6,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Space Shooter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
 
     <style>*{-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}</style> 
-    
+
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script> 
     <script src=" https://code.createjs.com/1.0.0/tweenjs.min.js"></script>
     <script src=" https://code.createjs.com/1.0.0/soundjs.min.js"></script>
     <script src=" https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
+
+<script type="text/javascript">
+    var canvas;
+    var stage;
     
+    var bgImg = new Image();
+    var bg;
+    var bg2Img = new Image();
+    var bg2;
+    
+    var sImg = new Image();
+    var ship;
+    
+    var eImg = new Image();
+    
+    var bImg = new Image();
+    var boss;
+    
+    var lImg = new Image();
+    
+    var bltImg = new Image();
+    
+    var winImg = new Image();
+    var loseImg = new Image();
+    
+    var vin; 
+    var lose;
+    
+    var lives = new createjs.Container();
+    var bullets = new createjs.Container();
+    
+    var enemies = new createjs.Container();
+    var bossHealth = 20;
+    var score;
+    var gfxLoaded = 0;
+    var centerX = 160;
+    var centerY = 240;
+    var tkr = new Object();
+    var timerSource;
+
+    bgImg.src = "{% static 'bg.png' %}";
+    bgImg.name = 'bg';
+    bgImg.onload = createjs.loadGfx;
+
+    bg2Img.src = "{% static 'bg.png' %}";
+    bg2Img.name = 'bg2';
+    bg2Img.onload = createjs.loadGfx;
+
+    sImg.src = "{% static 'ship.png' %}";
+    sImg.name = 'ship';
+    sImg.onload = createjs.loadGfx;
+
+    eImg.src = "{% static 'enemy.png' %}";
+    eImg.name = 'enemy';
+    eImg.onload = createjs.loadGfx;
+
+    bImg.src = "{% static 'boss.png' %}";
+    bImg.name = 'boss';
+    bImg.onload = createjs.loadGfx;
+
+    lImg.src = "{% static 'lives.png' %}";
+    lImg.name = 'live';
+    lImg.onload = createjs.loadGfx;
+
+    bltImg.src = "{% static 'bullets.png' %}";
+    bltImg.name = 'bullet';
+    bltImg.onload = createjs.loadGfx;
+
+    winImg.src = "{% static 'win.png' %}";
+    winImg.name = 'win';
+    winImg.onload = createjs.loadGfx;
+
+    loseImg.src = "{% static 'lose.png' %}";
+    loseImg.name = 'lose';
+    loseImg.onload = createjs.loadGfx;
+
+</script>
+<script src="{% static 'js/Main.js' %}" type="text/javascript"></script>
+
+
 </head>
 <body>
-    
+    okay there
         <body onload="Main();"> 
         <canvas id="Shooter" width="320" height="480"></canvas>
+
 </body>
 </html>
