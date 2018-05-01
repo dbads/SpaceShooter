@@ -11,7 +11,7 @@
 
 // var eImg = new Image();
 
-// var bImg = new Image();
+// var bImg = new Image();  
 // var boss;
 
 // var lImg = new Image();
@@ -41,7 +41,7 @@ function Main() {
     stage = new createjs.Stage(canvas);
     stage.mouseEventsEnabled = true;
 
-    SoundJs.addBatch([
+    createjs.Soundjs.addBatch([
         { name: 'boss', src: 'boss.mp3', instance: 1 },
         { name: 'explo', src: 'explo.mp3', instance: 10 },
         { name: 'shot', src: 'shot.mp3', instance: 10 },

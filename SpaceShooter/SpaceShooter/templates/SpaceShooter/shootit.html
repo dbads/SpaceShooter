@@ -14,7 +14,7 @@
     <script src=" https://code.createjs.com/1.0.0/tweenjs.min.js"></script>
     <script src=" https://code.createjs.com/1.0.0/soundjs.min.js"></script>
     <script src=" https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
-
+  
 <script type="text/javascript">
     var canvas;
     var stage;
@@ -33,7 +33,6 @@
     var boss;
     
     var lImg = new Image();
-    
     var bltImg = new Image();
     
     var winImg = new Image();
@@ -54,39 +53,39 @@
     var tkr = new Object();
     var timerSource;
 
-    bgImg.src = "{% static 'bg.png' %}";
+    bgImg.src = "{% static 'img/bg.png' %}";
     bgImg.name = 'bg';
     bgImg.onload = createjs.loadGfx;
 
-    bg2Img.src = "{% static 'bg.png' %}";
+    bg2Img.src = "{% static 'img/bg.png' %}";
     bg2Img.name = 'bg2';
     bg2Img.onload = createjs.loadGfx;
 
-    sImg.src = "{% static 'ship.png' %}";
+    sImg.src = "{% static 'img/ship.png' %}";
     sImg.name = 'ship';
     sImg.onload = createjs.loadGfx;
 
-    eImg.src = "{% static 'enemy.png' %}";
+    eImg.src = "{% static 'img/enemy.png' %}";
     eImg.name = 'enemy';
     eImg.onload = createjs.loadGfx;
 
-    bImg.src = "{% static 'boss.png' %}";
+    bImg.src = "{% static 'img/boss.png' %}";
     bImg.name = 'boss';
     bImg.onload = createjs.loadGfx;
 
-    lImg.src = "{% static 'lives.png' %}";
+    lImg.src = "{% static 'img/lives.png' %}";
     lImg.name = 'live';
     lImg.onload = createjs.loadGfx;
 
-    bltImg.src = "{% static 'bullets.png' %}";
+    bltImg.src = "{% static 'img/bullets.png' %}";
     bltImg.name = 'bullet';
     bltImg.onload = createjs.loadGfx;
 
-    winImg.src = "{% static 'win.png' %}";
+    winImg.src = "{% static 'img/win.png' %}";
     winImg.name = 'win';
     winImg.onload = createjs.loadGfx;
 
-    loseImg.src = "{% static 'lose.png' %}";
+    loseImg.src = "{% static 'img/lose.png' %}";
     loseImg.name = 'lose';
     loseImg.onload = createjs.loadGfx;
 
