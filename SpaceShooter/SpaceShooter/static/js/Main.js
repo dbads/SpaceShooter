@@ -41,11 +41,11 @@ function Main() {
     stage = new createjs.Stage(canvas);
     stage.mouseEventsEnabled = true;
 
-    createjs.Soundjs.addBatch([
-        { name: 'boss', src: 'boss.mp3', instance: 1 },
-        { name: 'explo', src: 'explo.mp3', instance: 10 },
-        { name: 'shot', src: 'shot.mp3', instance: 10 },
-    ]);
+    // createjs.Soundjs.addBatch([
+    //     { name: 'boss', src: 'boss.mp3', instance: 1 },
+    //     { name: 'explo', src: 'explo.mp3', instance: 10 },
+    //     { name: 'shot', src: 'shot.mp3', instance: 10 },
+    // ]);
 
     // // bgImg.src = "{% static 'bg.png' %}";
     // bgImg.name = 'bg';
@@ -65,7 +65,7 @@ function Main() {
 
     // // bImg.src = "{% static 'boss.png' %}";
     // bImg.name = 'boss';
-    // bImg.onload = loadGfx;
+    // bImg.onload = loadGfx;   
 
     // // lImg.src = "{% static 'lives.png' %}";
     // lImg.name = 'live';
@@ -83,8 +83,8 @@ function Main() {
     // loseImg.name = 'lose';
     // loseImg.onload = loadGfx;
 
-    Ticker.setFPS(30);
-    Ticker.addListener(stage);
+    // createjs.Ticker.setFPS(30);
+    // Ticker.addListener(stage);
 }
 
 function loadGfx(e) {
@@ -110,7 +110,7 @@ function addGameView() {
 
         l.x = 248 + (25 * i);
         l.y = 463;
-
+   
         lives.addChild(l);
         stage.update();
     }
