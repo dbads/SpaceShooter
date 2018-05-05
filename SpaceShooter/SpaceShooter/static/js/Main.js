@@ -297,7 +297,7 @@ function alert(e) {
         stage.removeChild(enemies, ship);
     }
 
-    bg.onPress = function () { window.location.reload(); };
-    bg2.onPress = function () { window.location.reload(); };
+    bg.onPress = function () { window.location.reload(); }
+    bg2.onPress = function () { window.location.reload(); }
     stage.update();
 }
